@@ -29,6 +29,7 @@
 		4CE2C2262B811220002F472A /* View+Shimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2C2252B811220002F472A /* View+Shimmer.swift */; };
 		4CE2C2282B8113BB002F472A /* GenericLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2C2272B8113BB002F472A /* GenericLoadingView.swift */; };
 		4CE2C22A2B82B70F002F472A /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2C2292B82B70F002F472A /* AuthenticationView.swift */; };
+		934551DF2BC85F1F008195A6 /* StateViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934551DE2BC85F1F008195A6 /* StateViewBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		4CE2C2252B811220002F472A /* View+Shimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Shimmer.swift"; sourceTree = "<group>"; };
 		4CE2C2272B8113BB002F472A /* GenericLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericLoadingView.swift; sourceTree = "<group>"; };
 		4CE2C2292B82B70F002F472A /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		934551DE2BC85F1F008195A6 /* StateViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		4CE2C1EB2B80FE01002F472A = {
 			isa = PBXGroup;
 			children = (
+				934551DE2BC85F1F008195A6 /* StateViewBuilder.swift */,
 				4CE2C1F62B80FE01002F472A /* DefinitiveViewState */,
 				4CE2C1F52B80FE01002F472A /* Products */,
 			);
@@ -216,6 +219,7 @@
 				4CE2C2182B810821002F472A /* VariableStateViewModel.swift in Sources */,
 				4CE2C2162B81076D002F472A /* VariableStateView.swift in Sources */,
 				4CE2C2142B8103F0002F472A /* AccountsListView.swift in Sources */,
+				934551DF2BC85F1F008195A6 /* StateViewBuilder.swift in Sources */,
 				4CE2C2092B80FE62002F472A /* Account.swift in Sources */,
 				4CE2C1F82B80FE01002F472A /* DefinitiveViewStateApp.swift in Sources */,
 				4CE2C2082B80FE62002F472A /* AccountManager.swift in Sources */,

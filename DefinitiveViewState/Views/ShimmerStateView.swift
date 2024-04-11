@@ -11,25 +11,28 @@ struct ShimmerStateView: View {
     @StateObject var viewModel = StateViewModel()
     var body: some View {
         Group {
-            switch viewModel.state {
-            case .loading:
-                AccountsListView(accounts: AccountManager.mock)
-                    .redacted(reason: .placeholder)
-                    .shimmering()
-                    .task {
-                        await viewModel.load()
-                    }
-            case let .loaded(accounts):
-                AccountsListView(accounts: accounts)
-            case let .empty(message):
-                StandardEmptyView(message: message)
-            case let .error(message):
-                StandardErrorView(message: message, retry: {
-                    viewModel.state = .loading
+            StateViewBuilder(state: viewModel.state)
+                .setLoadingView({
+                    buildAccountList(accounts: AccountManager.mock)
+                        .redacted(reason: .placeholder)
+                        .shimmering()
                 })
-            }
+                .setErrorView({ message in
+                    StandardErrorView(message: message, retry: {
+                        viewModel.state = .loading
+                    })
+                })
+                .buildContent(buildAccountList)
+
+        }.task {
+            await viewModel.load()
         }
         .navigationTitle("Accounts")
+    }
+    
+    @ViewBuilder
+    private func buildAccountList(accounts: [Account]) -> some View {
+        AccountsListView(accounts: accounts)
     }
 }
 
